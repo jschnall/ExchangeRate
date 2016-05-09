@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'exchange-rate'
+
+    publishedGroupId = 'com.sporksoft.exchangerate'
+    libraryName = 'ExchangeRate'
+    artifact = 'exchange-rate'
+
+    libraryDescription = 'A native view backed by the currencylayer api, which lists exchange rates by locale.'
+
+    siteUrl = 'https://github.com/jschnall/ExchangeRate'
+    gitUrl = 'https://github.com/jschnall/ExchangeRate.git'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'jschnall'
+    developerName = 'Joel Schnall'
+    developerEmail = 'jschnall@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
@@ -28,3 +52,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.3.0'
     compile 'com.google.code.gson:gson:2.6.2'
 }
+
+apply from: 'https://raw.githubusercontent.com/jschnall/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/jschnall/JCenter/master/bintrayv1.gradle'
